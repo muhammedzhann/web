@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practis</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>LOGO</h1>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#" onclick="showTab(0)">Home</a>
+                <a href="#" onclick="showTab(1)">About Us</a>
+                <a href="#" onclick="showTab(2)">Services</a>
+                <a href="#">Contacts</a>
+                <a href="#" onclick="toggleDarkMode()">Dark</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab(0)">Tab 1</div>
+        <div class="tab" onclick="showTab(1)">Tab 2</div>
+        <div class="tab" onclick="showTab(2)">Tab 3</div>
+    </div>
+
+    <div id="tab-0" class="tab-content active">
+        <h2>Contents of tab 1</h2>
+        <p>This is the content of the tab 1</p>
+    </div>
+    <div id="tab-1" class="tab-content">
+        <h2>Tab Contents 2</h2>
+        <p>This is the content of the tab 2</p>
+    </div>
+    <div id="tab-2" class="tab-content">
+        <h2>Tab Contents 3</h2>
+        <p>This is the content of the tab 3</p>
+    </div>
+
+    <button class="btn" onclick="showModal()">Open modal window</button>
+    <div id="modal" class="modal" onclick="hideModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Modal window</h2>
+            <p>This is a modal window. Click outside the area to close.</p>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://www.befunky.com/images/prismic/5ddfea42-7377-4bef-9ac4-f3bd407d52ab_landing-photo-to-cartoon-img5.jpeg?auto=avif,webp&format=jpg&width=863" alt="Слайд 1"></div>
+            <div class="slide"><img src="https://www.befunky.com/images/prismic/5ddfea42-7377-4bef-9ac4-f3bd407d52ab_landing-photo-to-cartoon-img5.jpeg?auto=avif,webp&format=jpg&width=863" alt="Слайд 2"></div>
+            <div class="slide"><img src="https://www.befunky.com/images/prismic/5ddfea42-7377-4bef-9ac4-f3bd407d52ab_landing-photo-to-cartoon-img5.jpeg?auto=avif,webp&format=jpg&width=863" alt="Слайд 3"></div>
+        </div>
+        <div class="slider-controls">
+            <div class="slider-control" onclick="changeSlide(-1)"><</div>
+            <div class="slider-control" onclick="changeSlide(1)">></div>
+        </div>
+    </div>
+
+    <div class="contact-form" id="contactForm">
+		<form action="">
+			<input id="name" type="text" placeholder="Your name" required>
+			<input id="email" type="text" placeholder="Email address.." required>
+			<textarea id="message" name="" cols="30" rows="10" placeholder="Write a message here..." required></textarea>
+			<input type="submit" name="" value="Send Message" class="send-btn">
+		</form>
+	</div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Multifunctional Site</h2>
+                <p>&copy; 2024 Multifunctional Site. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <h3>Repositories</h3>
+                <ul class="repo-list">
+                    <li><a href="https://github.com/your-username/your-repo" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/your-username/your-repo" target="_blank">Bitbucket</a></li>
+                    <li><a href="https://gitlab.com/your-username/your-repo" target="_blank">GitLab</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="web.js"></script>
+</body>
+</html>
